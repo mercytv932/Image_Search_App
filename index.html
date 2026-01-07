@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Search App</title>
-  
+
   <style>
+
   </style>
-  
 </head>
 <body>
 
@@ -17,8 +17,8 @@
 <div id="result"></div>
 
 
-<script>
-    
+  <script>
+
 const searchInput = document.querySelector("#searchInput");
 const search = document.querySelector(".search");
 const result = document.querySelector("#result");
@@ -44,22 +44,23 @@ fetch(url)
 
   if(!response.ok){
     
-   throw new Error("Image not found!");
-    }
+    throw new Error("Image not found!");
+  }
 })
 
-  
+
 .then(data=>{
   console.log(data);
+
+  result.innerHTML = "";
+
 })
 
-.catch(errror=> console.log(error));
+.catch(error=> console.log(error));
 
 });
+
 
   </script>
 </body>
 </html>
-
-
-
