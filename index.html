@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Search App</title>
 
-  <style> </style>
-  
+  <style>
+
+  </style>
 </head>
 <body>
+
 <input type="search" id="searchInput" placeholder="Image...">
 <button class="search">Search</button>
 
 <div id="result"></div>
 
-  
+
   <script>
 
 const searchInput = document.querySelector("#searchInput");
@@ -51,22 +53,23 @@ fetch(url)
   console.log(data);
 
   result.innerHTML = "";
+  data.results.forEach(photo=>{
+    
+    const imageUrl = photo.urls.small;
+    const newImage = document.createElement("img");
+    newImage.src = imageUrl;
+    result.appendChild(newImage);
+ 
+
+  });
 
 })
 
-.catch(error=> console.log(error));
+.catch(error=> console.log(error))
 
 });
 
-    
+
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
