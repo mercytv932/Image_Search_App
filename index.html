@@ -12,6 +12,16 @@
       height: 100%
     }
 
+    #result{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+
     #error{
       color: red;
     }
@@ -26,7 +36,11 @@
 <input type="search" id="searchInput" placeholder="Image...">
 <button class="search">Search</button>
 
-<div id="result"></div>
+<div id="container">
+  <div id="result"></div>
+
+</div>
+
 <div id="error"></div>
 <div class="loader"></div>
 
