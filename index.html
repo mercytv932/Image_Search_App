@@ -113,8 +113,14 @@ fetch(url)
   data.results.forEach(photo=>{
     
     const imageUrl = photo.urls.small;
+    const fullImageUrl = photo.urls.full;
     const newImage = document.createElement("img");
     newImage.src = imageUrl;
+
+    newImage.addEventListener("click", function(){
+      window.open(fullImageUrl, "blank"); // click on any image to be opened on a new tab
+    });
+
     result.appendChild(newImage);
 
   });
