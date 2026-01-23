@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Search App</title>
+
+  <style>
+
+    body{
+      background-color: aliceblue;
+      height: 100%
+    }
+
+    #result{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #result img{
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    #result img:hover{
+      transform: scale(1.05);
+    }
+
+    @media(max-width:768px){
+      #result{
+        grid-template-columns: 1fr;
+      }
+    } /*one column on phones*/
+
+
+    #error{
+      color: red;
+    }
+
+    .search{
+      background-color: #aedbff;
+      border-radius: 5px;
+      font-size: 12px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .search:hover{
+      transform: scale(1.1);
+    }
+
+  </style>
+</head>
+<body>
+
+<input type="search" id="searchInput" placeholder="Image...">
+<button class="search">Search</button>
+
+<div id="container">
+  <div id="result"></div>
+
+</div>
+
+<div id="error"></div>
+<div class="loader"></div>
+<script src="script.js"></script>
+</body>
+</html>
