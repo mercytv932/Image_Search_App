@@ -1,0 +1,67 @@
+body{
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background-image: url(image.png); */
+}
+
+.container{  
+  background-color: aquamarine;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  justify-content: center; /*centers horizontally*/
+  align-items: center; /*centers*/
+  padding: 30px;
+  place-items: center;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.searchBtn{
+  border-radius: 5px;
+  background-color: rgb(154, 208, 255);
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.searchBtn:hover{
+  text-decoration: underline;
+  background-color: rgb(120, 180, 230);
+  transform: translateY(-2px);
+}
+
+#cityInput{
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  width: 200px;
+  margin-right: 10px;
+}
+
+#result{
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+#error{
+  margin-top: 20px;
+  color: red;
+  font-weight: bold;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.h2{
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
