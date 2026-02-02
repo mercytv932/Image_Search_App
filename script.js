@@ -74,3 +74,9 @@ fetch(url)
 
 
 });
+
+searchInput.addEventListener("keydown", function(event){
+  if(event ==="Enter"){
+    
+  }
+});
