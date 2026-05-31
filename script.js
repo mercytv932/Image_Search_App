@@ -8,7 +8,6 @@ const error = document.querySelector("#error");
 
 const apiKey = '3NNxJrdL9DFkFTxOL1q1JlfQn9OHPkVOLUNvSKJvX_s';
 
-
 search.addEventListener("click", function(){
   const searchValue = searchInput.value; // searchValue is = whatever the user types, for example, Apple.
 
@@ -72,11 +71,12 @@ fetch(url)
   loader.style.display = "none"; // loader disappears
 });
 
+searchInput.value = "";
 
 });
 
 searchInput.addEventListener("keydown", function(event){
-  if(event ==="Enter"){
-    
+  if(event.key ==="Enter"){
+    search.click();
   }
 });
