@@ -1,10 +1,8 @@
-
 const searchInput = document.querySelector("#searchInput");
 const search = document.querySelector(".search");
 const result = document.querySelector("#result");
 const loader = document.querySelector(".loader");
 const error = document.querySelector("#error");
-
 
 const apiKey = '3NNxJrdL9DFkFTxOL1q1JlfQn9OHPkVOLUNvSKJvX_s';
 
