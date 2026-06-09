@@ -16,8 +16,6 @@ result.innerHTML = "";
 const url = (`https://api.unsplash.com/search/photos?query=${searchValue}&client_id=${apiKey}`);
 console.log('The url is:', url);
 
- 
-
 fetch(url)
 .then(response=>{
 
